@@ -14,6 +14,7 @@ public class AirConditioner implements Appliance {
 
     public AirConditioner() {
         currentMode = Mode.OFF;
+        SmartHomeLogger.msg("AC initialized: OFF state");
     }
 
     @Override
@@ -24,6 +25,7 @@ public class AirConditioner implements Appliance {
     @Override
     public void forceOff() {
         currentMode = Mode.OFF;
+        SmartHomeLogger.msg("AC forced off");
     }
 
     /**

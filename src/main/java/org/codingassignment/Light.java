@@ -9,6 +9,7 @@ public class Light implements Appliance {
 
     public Light() {
         isOn = false;
+        SmartHomeLogger.msg("Light initialized: OFF state");
     }
 
     @Override
@@ -19,6 +20,7 @@ public class Light implements Appliance {
     @Override
     public void forceOff() {
         isOn = false;
+        SmartHomeLogger.msg("Light forced off");
     }
 
     /**

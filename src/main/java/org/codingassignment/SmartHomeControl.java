@@ -17,6 +17,9 @@ public class SmartHomeControl {
      * Main method for the Smart Home Appliance Controller
      */
     public static void main(String[] args) {
+        SmartHomeLogger.initialize();
+        SmartHomeLogger.msg("Smart Home Control starting");
+
         List<Appliance> applianceList = new ArrayList<>();
 
         light = new Light();
@@ -28,8 +31,9 @@ public class SmartHomeControl {
         airConditioner = new AirConditioner();
         applianceList.add(airConditioner);
 
-        //If the version is below the current update and past or equal to the update date it will automatically update
-        UpdateSystem.checkForUpdateAndInstall(applianceList);
+        // If the version is below the current update and past or equal to the update date it will automatically update
+        boolean wasUpdated = UpdateSystem.checkForUpdateAndInstall(applianceList);
+        SmartHomeLogger.msg(wasUpdated ? "System was updated" : "No update required");
 
         System.out.println(MessageColor.SUCCESS + "Welcome to Smart Home Appliance Control\n" + MessageColor.RESET);
 
@@ -47,15 +51,18 @@ public class SmartHomeControl {
 
         while (scanner.hasNextLine()) {
             String line = scanner.nextLine();
+            SmartHomeLogger.msg("User input: " + line);
 
-            if (line.length() == 1 && line.charAt(0) == 'x')
+            if (line.length() == 1 && line.charAt(0) == 'x') {
                 break;
+            }
 
             if (line.length() == 2 && Character.isDigit(line.charAt(1))) {
                 applianceType = Character.toLowerCase(line.charAt(0));
 
                 // Subtract by the char of 0 to get the true integer value
                 mode = line.charAt(1) - '0';
+                SmartHomeLogger.msg("Appliance type: " + applianceType + ", Mode:" + mode);
 
                 switch (applianceType) {
                     case 'l' -> setLightMode(mode);
@@ -64,9 +71,12 @@ public class SmartHomeControl {
                     default -> warningMessage("Warning: Appliance type was not found");
                 }
             }
-            else
+            else {
                 warningMessage("Warning: Input must be 2 characters (Ex. f1)");
+            }
         }
+
+        SmartHomeLogger.msg("Shutting down");
     }
 
     private static void setLightMode(int mode) {
@@ -102,6 +112,7 @@ public class SmartHomeControl {
      * Prints warning message in yellow with an underline
      */
     public static void warningMessage(String message) {
+        SmartHomeLogger.warning(message);
         System.out.println(MessageColor.WARNING + message + MessageColor.RESET);
     }
 }

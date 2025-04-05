@@ -14,6 +14,7 @@ public class Fan implements Appliance {
 
     public Fan() {
         currentSpeed = Speed.OFF;
+        SmartHomeLogger.msg("Fan initialized: OFF state");
     }
 
     @Override
@@ -24,6 +25,7 @@ public class Fan implements Appliance {
     @Override
     public void forceOff() {
         currentSpeed = Speed.OFF;
+        SmartHomeLogger.msg("Fan forced off");
     }
 
     /**
@@ -31,6 +33,7 @@ public class Fan implements Appliance {
      */
     public void reduceSpeed() {
         setCurrentSpeed(currentSpeed.ordinal() - 1);
+        SmartHomeLogger.msg("Fan speed reduced to " + currentSpeed);
     }
 
     /**
@@ -38,6 +41,7 @@ public class Fan implements Appliance {
      */
     public void increaseSpeed() {
         setCurrentSpeed(currentSpeed.ordinal() + 1);
+        SmartHomeLogger.msg("Fan speed increased to " + currentSpeed);
     }
 
     /**

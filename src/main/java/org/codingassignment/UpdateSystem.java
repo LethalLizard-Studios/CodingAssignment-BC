@@ -21,12 +21,20 @@ public final class UpdateSystem {
      * Verifies if update required then updates and installs
      */
     public static boolean checkForUpdateAndInstall(List<Appliance> applianceList) {
+        SmartHomeLogger.msg("Checking for system updates. Current version: " + currentVersionYear +
+                ", Current date: " + currentDate + ", Current time: " + currentTime);
+
         if (checkIfUpdateRequired(currentVersionYear)) {
+            SmartHomeLogger.msg("Update required, turning off all devices and installing update");
             turnOffDevices(applianceList);
+            int oldVersion = currentVersionYear;
             currentVersionYear = LocalDate.now().getYear();
+            SmartHomeLogger.msg("System updated from version " + oldVersion + " to version " + currentVersionYear);
             System.out.println("System has updated to Version " + UpdateSystem.currentVersionYear);
             return true;
         }
+
+        SmartHomeLogger.msg("No update required at this time");
         return false;
     }
 
@@ -35,18 +43,26 @@ public final class UpdateSystem {
      */
     private static boolean checkIfUpdateRequired(int currentVersionYear) {
         //If current version is up-to-date or newer don't update
-        if (currentVersionYear >= currentDate.getYear())
+        if (currentVersionYear >= currentDate.getYear()) {
+            SmartHomeLogger.msg("Current version is up-to-date or newer");
             return false;
+        }
 
         // Update each year on January 1st 1:00am local time
         LocalDate updateDate = LocalDate.of(currentDate.getYear(), 1, 1);
         LocalTime updateTime = LocalTime.of(1, 0);
+        SmartHomeLogger.msg("Update date: " + updateDate + ", Update time: " + updateTime);
 
         // Checks if date is equal to or after the update date, then checks the time if it's the same day.
-        if (!currentDate.isBefore(updateDate))
-            return currentDate.isEqual(updateDate) ? !currentTime.isBefore(updateTime) : true;
-        else
+        if (!currentDate.isBefore(updateDate)) {
+            boolean updateRequired = currentDate.isEqual(updateDate) ? !currentTime.isBefore(updateTime) : true;
+            SmartHomeLogger.msg("Date is after or equal to update date");
+            return updateRequired;
+        }
+        else {
+            SmartHomeLogger.msg("Current date is before update date");
             return false;
+        }
     }
 
     /**
@@ -57,5 +73,6 @@ public final class UpdateSystem {
         for (Appliance appliance : appliancesList) {
             appliance.forceOff();
         }
+        SmartHomeLogger.msg("All devices turned off");
     }
 }

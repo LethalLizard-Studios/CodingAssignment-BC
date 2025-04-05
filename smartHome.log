@@ -1,0 +1,126 @@
+Apr 05, 2025 7:48:27 PM org.codingassignment.SmartHomeLogger msg
+INFO: Logging system initialized
+Apr 05, 2025 7:48:27 PM org.codingassignment.SmartHomeLogger msg
+INFO: Smart Home Control starting up
+Apr 05, 2025 7:48:27 PM org.codingassignment.SmartHomeLogger msg
+INFO: Fan initialized: OFF state
+Apr 05, 2025 7:48:27 PM org.codingassignment.SmartHomeLogger msg
+INFO: Fan forced off
+Apr 05, 2025 7:49:40 PM org.codingassignment.SmartHomeLogger msg
+INFO: Logging system initialized
+Apr 05, 2025 7:49:40 PM org.codingassignment.SmartHomeLogger msg
+INFO: Smart Home Control starting up
+Apr 05, 2025 7:49:40 PM org.codingassignment.SmartHomeLogger msg
+INFO: Fan initialized: OFF state
+Apr 05, 2025 7:49:40 PM org.codingassignment.SmartHomeLogger msg
+INFO: Fan forced off
+Apr 05, 2025 7:49:47 PM org.codingassignment.SmartHomeLogger msg
+INFO: Fan speed increased to LOW
+Apr 05, 2025 7:50:18 PM org.codingassignment.SmartHomeLogger msg
+INFO: Logging system initialized
+Apr 05, 2025 7:50:18 PM org.codingassignment.SmartHomeLogger msg
+INFO: Smart Home Control starting up
+Apr 05, 2025 7:50:18 PM org.codingassignment.SmartHomeLogger msg
+INFO: Fan initialized: OFF state
+Apr 05, 2025 7:50:18 PM org.codingassignment.SmartHomeLogger msg
+INFO: Fan forced off
+Apr 05, 2025 7:51:59 PM org.codingassignment.SmartHomeLogger msg
+INFO: Logging system initialized
+Apr 05, 2025 7:51:59 PM org.codingassignment.SmartHomeLogger msg
+INFO: Smart Home Control starting up
+Apr 05, 2025 7:51:59 PM org.codingassignment.SmartHomeLogger msg
+INFO: Fan initialized: OFF state
+Apr 05, 2025 7:51:59 PM org.codingassignment.SmartHomeLogger msg
+INFO: Fan forced off
+Apr 05, 2025 7:52:01 PM org.codingassignment.SmartHomeLogger msg
+INFO: Fan speed increased to LOW
+Apr 05, 2025 7:52:03 PM org.codingassignment.SmartHomeLogger msg
+INFO: Fan speed reduced to OFF
+Apr 05, 2025 8:19:40 PM org.codingassignment.SmartHomeLogger msg
+INFO: Logging system initialized
+Apr 05, 2025 8:19:40 PM org.codingassignment.SmartHomeLogger msg
+INFO: Smart Home Control starting
+Apr 05, 2025 8:19:40 PM org.codingassignment.SmartHomeLogger msg
+INFO: Light initialized: OFF state
+Apr 05, 2025 8:19:40 PM org.codingassignment.SmartHomeLogger msg
+INFO: Fan initialized: OFF state
+Apr 05, 2025 8:19:40 PM org.codingassignment.SmartHomeLogger msg
+INFO: AC initialized: OFF state
+Apr 05, 2025 8:19:40 PM org.codingassignment.SmartHomeLogger msg
+INFO: Checking for system updates. Current version: 2023, Current date: 2025-04-05, Current time: 20:19:40.392690100
+Apr 05, 2025 8:19:40 PM org.codingassignment.SmartHomeLogger msg
+INFO: Update date: 2025-01-01, Update time: 01:00
+Apr 05, 2025 8:19:40 PM org.codingassignment.SmartHomeLogger msg
+INFO: Date is after or equal to update date
+Apr 05, 2025 8:19:40 PM org.codingassignment.SmartHomeLogger msg
+INFO: Update required, turning off all devices and installing update
+Apr 05, 2025 8:19:40 PM org.codingassignment.SmartHomeLogger msg
+INFO: Light forced off
+Apr 05, 2025 8:19:40 PM org.codingassignment.SmartHomeLogger msg
+INFO: Fan forced off
+Apr 05, 2025 8:19:40 PM org.codingassignment.SmartHomeLogger msg
+INFO: AC forced off
+Apr 05, 2025 8:19:40 PM org.codingassignment.SmartHomeLogger msg
+INFO: All devices turned off
+Apr 05, 2025 8:19:40 PM org.codingassignment.SmartHomeLogger msg
+INFO: System updated from version 2023 to version 2025
+Apr 05, 2025 8:19:40 PM org.codingassignment.SmartHomeLogger msg
+INFO: System was updated
+Apr 05, 2025 8:20:56 PM org.codingassignment.SmartHomeLogger msg
+INFO: Logging system initialized
+Apr 05, 2025 8:20:57 PM org.codingassignment.SmartHomeLogger msg
+INFO: Smart Home Control starting
+Apr 05, 2025 8:20:57 PM org.codingassignment.SmartHomeLogger msg
+INFO: Light initialized: OFF state
+Apr 05, 2025 8:20:57 PM org.codingassignment.SmartHomeLogger msg
+INFO: Fan initialized: OFF state
+Apr 05, 2025 8:20:57 PM org.codingassignment.SmartHomeLogger msg
+INFO: AC initialized: OFF state
+Apr 05, 2025 8:20:57 PM org.codingassignment.SmartHomeLogger msg
+INFO: Checking for system updates. Current version: 2023, Current date: 2025-04-05, Current time: 20:20:57.036233300
+Apr 05, 2025 8:20:57 PM org.codingassignment.SmartHomeLogger msg
+INFO: Update date: 2025-01-01, Update time: 01:00
+Apr 05, 2025 8:20:57 PM org.codingassignment.SmartHomeLogger msg
+INFO: Date is after or equal to update date
+Apr 05, 2025 8:20:57 PM org.codingassignment.SmartHomeLogger msg
+INFO: Update required, turning off all devices and installing update
+Apr 05, 2025 8:20:57 PM org.codingassignment.SmartHomeLogger msg
+INFO: Light forced off
+Apr 05, 2025 8:20:57 PM org.codingassignment.SmartHomeLogger msg
+INFO: Fan forced off
+Apr 05, 2025 8:20:57 PM org.codingassignment.SmartHomeLogger msg
+INFO: AC forced off
+Apr 05, 2025 8:20:57 PM org.codingassignment.SmartHomeLogger msg
+INFO: All devices turned off
+Apr 05, 2025 8:20:57 PM org.codingassignment.SmartHomeLogger msg
+INFO: System updated from version 2023 to version 2025
+Apr 05, 2025 8:20:57 PM org.codingassignment.SmartHomeLogger msg
+INFO: System was updated
+Apr 05, 2025 8:21:00 PM org.codingassignment.SmartHomeLogger msg
+INFO: User input: f1
+Apr 05, 2025 8:21:00 PM org.codingassignment.SmartHomeLogger msg
+INFO: Appliance type: f, Mode:1
+Apr 05, 2025 8:21:00 PM org.codingassignment.SmartHomeLogger msg
+INFO: Fan speed increased to LOW
+Apr 05, 2025 8:21:02 PM org.codingassignment.SmartHomeLogger msg
+INFO: User input: f0
+Apr 05, 2025 8:21:02 PM org.codingassignment.SmartHomeLogger msg
+INFO: Appliance type: f, Mode:0
+Apr 05, 2025 8:21:02 PM org.codingassignment.SmartHomeLogger msg
+INFO: Fan speed reduced to OFF
+Apr 05, 2025 8:21:04 PM org.codingassignment.SmartHomeLogger msg
+INFO: User input: l1
+Apr 05, 2025 8:21:04 PM org.codingassignment.SmartHomeLogger msg
+INFO: Appliance type: l, Mode:1
+Apr 05, 2025 8:21:06 PM org.codingassignment.SmartHomeLogger msg
+INFO: User input: l0
+Apr 05, 2025 8:21:06 PM org.codingassignment.SmartHomeLogger msg
+INFO: Appliance type: l, Mode:0
+Apr 05, 2025 8:21:10 PM org.codingassignment.SmartHomeLogger msg
+INFO: User input: a1
+Apr 05, 2025 8:21:10 PM org.codingassignment.SmartHomeLogger msg
+INFO: Appliance type: a, Mode:1
+Apr 05, 2025 8:21:12 PM org.codingassignment.SmartHomeLogger msg
+INFO: User input: a5
+Apr 05, 2025 8:21:12 PM org.codingassignment.SmartHomeLogger msg
+INFO: Appliance type: a, Mode:5
