@@ -42,12 +42,9 @@ public final class UpdateSystem {
         LocalDate updateDate = LocalDate.of(currentDate.getYear(), 1, 1);
         LocalTime updateTime = LocalTime.of(1, 0);
 
-        // Checks if date is equal to or after the update date, then checks the for time if it's the same day.
+        // Checks if date is equal to or after the update date, then checks the time if it's the same day.
         if (!currentDate.isBefore(updateDate))
-            if (currentDate.isEqual(updateDate))
-                return !currentTime.isBefore(updateTime);
-            else
-                return true;
+            return currentDate.isEqual(updateDate) ? !currentTime.isBefore(updateTime) : true;
         else
             return false;
     }

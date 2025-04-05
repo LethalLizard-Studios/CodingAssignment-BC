@@ -8,19 +8,24 @@ import java.util.Scanner;
  * Main class for the Smart Home Appliance Controller
  */
 public class SmartHomeControl {
+
+    static Light light;
+    static Fan fan;
+    static AirConditioner airConditioner;
+
     /**
      * Main method for the Smart Home Appliance Controller
      */
     public static void main(String[] args) {
         List<Appliance> applianceList = new ArrayList<>();
 
-        Light light = new Light();
+        light = new Light();
         applianceList.add(light);
 
-        Fan fan = new Fan();
+        fan = new Fan();
         applianceList.add(fan);
 
-        AirConditioner airConditioner = new AirConditioner();
+        airConditioner = new AirConditioner();
         applianceList.add(airConditioner);
 
         //If the version is below the current update and past or equal to the update date it will automatically update
@@ -53,29 +58,44 @@ public class SmartHomeControl {
                 mode = line.charAt(1) - '0';
 
                 switch (applianceType) {
-                    case 'l':
-                        if (mode < 0 || mode > 1)
-                            warningMessage("Warning: A light may only be On (1) or Off (0)");
-                        else
-                            light.toggleSwitch(mode == 1);
-                        break;
-                    case 'f':
-                        if (mode == 0)
-                            fan.reduceSpeed();
-                        else if (mode == 1)
-                            fan.increaseSpeed();
-                        else
-                            warningMessage("Warning: A fan can increase speed (1) or reduce speed (0)");
-                        break;
-                    case 'a':
-                        if (!airConditioner.setMode(mode))
-                            warningMessage("Warning: AC modes are OFF (0), AUTO (1), FAN (2), DRY (3), COOL (4), SLEEP (5)");
-                        break;
+                    case 'l' -> setLightMode(mode);
+                    case 'f' -> setFanMode(mode);
+                    case 'a' -> setAirConditionerMode(mode);
+                    default -> warningMessage("Warning: Appliance type was not found");
                 }
             }
             else
                 warningMessage("Warning: Input must be 2 characters (Ex. f1)");
         }
+    }
+
+    private static void setLightMode(int mode) {
+        if (light == null)
+            warningMessage("Warning: No light was found");
+
+        if (mode < 0 || mode > 1)
+            warningMessage("Warning: A light may only be On (1) or Off (0)");
+        else
+            light.toggleSwitch(mode == 1);
+    }
+
+    private static void setFanMode(int mode) {
+        if (fan == null)
+            warningMessage("Warning: No fan was found");
+
+        switch (mode) {
+            case 0 -> fan.reduceSpeed();
+            case 1 -> fan.increaseSpeed();
+            default -> warningMessage("Warning: A fan can increase speed (1) or reduce speed (0)");
+        }
+    }
+
+    private static void setAirConditionerMode(int mode) {
+        if (airConditioner == null)
+            warningMessage("Warning: No fan was found");
+
+        if (!airConditioner.setMode(mode))
+            warningMessage("Warning: AC modes are OFF (0), AUTO (1), FAN (2), DRY (3), COOL (4), SLEEP (5)");
     }
 
     /**
