@@ -44,8 +44,4 @@ public class SmartHomeLogger {
     public static void warning(String message) {
         LOGGER.warning(message);
     }
-
-    public static void error(String message) {
-        LOGGER.severe(message);
-    }
 }
